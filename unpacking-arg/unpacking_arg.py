@@ -1,0 +1,35 @@
+def multiply(*args):
+    """
+    """
+    print(args)
+    total = 1
+
+    for arg in args:
+        total = total * arg
+    return total
+
+
+def apply(*args, operator):
+    """
+    """
+    if operator == "*":
+        return multiply(*args)
+    elif operator == "+":
+        return sum(args)
+    else:
+        return "No valid operator provided to apply()"
+
+print(apply(1, 3, 4, 7, operator="*"))
+
+# def add(x, y):
+#     return x * y
+
+# nums = [3, 5]
+# print(add(*nums))
+
+# nums_two = {"x":15, "y":25}
+# # INSTEAD OF THIS...
+# print(add(x=nums_two["x"], y=nums_two["y"]))
+
+# # DO THIS:
+# print(add(**nums_two))
