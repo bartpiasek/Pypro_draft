@@ -1,4 +1,4 @@
-from database import add_entry, get_entries
+from database import add_entry, get_entries, create_table
 
 welcome = "Welcome to the programming diary!"
 
@@ -20,7 +20,7 @@ def view_entries(entries):
             print(f"{entry['date']}\n{entry['content']}\n\n")
 
 print(welcome)
-
+create_table()
 
 while (user_input := input(menu)) != "3":
     if user_input == "1":
